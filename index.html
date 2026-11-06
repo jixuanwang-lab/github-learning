@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Typography Experiment</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #f0eee8;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px;
+      font-size: 12px;
+    }
+
+    main {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: clamp(64px, 14vw, 180px);
+      line-height: 0.85;
+      letter-spacing: -0.08em;
+      text-align: center;
+      transition: all 0.4s;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: 1px solid black;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .alternate h1 {
+      color: #d64b30;
+      transform: rotate(-10deg);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span>TYPOGRAPHY EXPERIMENT</span>
+    <span>001 / 2026</span>
+  </header>
+
+  <main>
+    <h1>HELLO<br>WORLD.</h1>//网页显示的文字
+    <button onclick="changeStyle()">
+      Change Style
+    </button>
+  </main>
+
+  <script>
+    function changeStyle() {
+      document.body.classList.toggle("alternate");
+    }
+  </script>
+</body>
+</html>
 
